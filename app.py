@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
-    return "<p>Hello, Aditya!</p>"
+def tradePage():
+    historyData = []
+
+    return render_template("index.html", historyData=historyData)
 
 
 if __name__ == '__main__':
