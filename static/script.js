@@ -74,6 +74,7 @@ const showTradeHistory = () => {
       } </button>`
       actionStock.addEventListener("click", () => {
         tradeHistory[hisInd].placedPrice = stockPrice
+        localStorage.setItem("tradeHistory", JSON.stringify(tradeHistory))
       })
     }
   })
